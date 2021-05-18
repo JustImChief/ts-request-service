@@ -22,7 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import axios from 'axios';
 import objectToFormData from 'objecttoformdata';
-import RequestServiceError from './RequestServiceError';
+import { default as RequestServiceError } from './RequestServiceError';
 var RequestService = /** @class */ (function () {
     function RequestService(config) {
         if (config === void 0) { config = {}; }

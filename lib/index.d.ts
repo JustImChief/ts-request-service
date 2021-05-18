@@ -1,5 +1,5 @@
 import { AxiosRequestConfig, AxiosResponse, CancelToken } from 'axios';
-import RequestServiceError from './RequestServiceError';
+import { default as RequestServiceError } from './RequestServiceError';
 declare class RequestService {
     static methods: {
         delete: string;

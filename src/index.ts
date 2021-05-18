@@ -1,7 +1,7 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, CancelToken } from 'axios';
 import objectToFormData                                                         from 'objecttoformdata';
 
-import RequestServiceError from './RequestServiceError';
+import { default as RequestServiceError } from './RequestServiceError';
 
 class RequestService {
   static methods       = {
