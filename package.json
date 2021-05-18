@@ -1,6 +1,6 @@
 {
   "name": "ts-request-service",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Axios request service",
   "main": "src/index.ts",
   "module": "lib-esm/index.js",
