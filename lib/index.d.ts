@@ -27,15 +27,15 @@ declare class RequestService {
     constructor(config?: AxiosRequestConfig & {
         formData?: boolean;
     });
-    delete<T = any, R = AxiosResponse<any>>(url: string, options?: AxiosRequestConfig): Promise<R> | void;
-    get<T = any, R = AxiosResponse<any>>(url: string, options?: AxiosRequestConfig): Promise<R> | void;
+    delete<T = any, R = AxiosResponse<any>>(url: string, options?: AxiosRequestConfig): Promise<R>;
+    get<T = any, R = AxiosResponse<any>>(url: string, options?: AxiosRequestConfig): Promise<R>;
     getUri(options?: AxiosRequestConfig): string;
-    head<T = any, R = AxiosResponse<any>>(url: string, options?: AxiosRequestConfig): Promise<R> | void;
-    options<T = any, R = AxiosResponse<any>>(url: string, options?: AxiosRequestConfig): Promise<R> | void;
-    patch<T = any, R = AxiosResponse<any>>(url: string, data: any, options?: AxiosRequestConfig): Promise<R> | void;
-    post<T = any, R = AxiosResponse<any>>(url: string, data: any, options?: AxiosRequestConfig): Promise<R> | void;
-    put<T = any, R = AxiosResponse<any>>(url: string, data: any, options?: AxiosRequestConfig): Promise<R> | void;
-    request<T = any, R = AxiosResponse<any>>(options: AxiosRequestConfig): Promise<R> | void;
+    head<T = any, R = AxiosResponse<any>>(url: string, options?: AxiosRequestConfig): Promise<R>;
+    options<T = any, R = AxiosResponse<any>>(url: string, options?: AxiosRequestConfig): Promise<R>;
+    patch<T = any, R = AxiosResponse<any>>(url: string, data: any, options?: AxiosRequestConfig): Promise<R>;
+    post<T = any, R = AxiosResponse<any>>(url: string, data: any, options?: AxiosRequestConfig): Promise<R>;
+    put<T = any, R = AxiosResponse<any>>(url: string, data: any, options?: AxiosRequestConfig): Promise<R>;
+    request<T = any, R = AxiosResponse<any>>(options: AxiosRequestConfig): Promise<R>;
     private prepareData;
 }
 export default RequestService;

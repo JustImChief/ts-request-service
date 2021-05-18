@@ -52,7 +52,7 @@ class RequestService {
     this.request = this.request.bind(this);
   }
 
-  delete<T = any, R = AxiosResponse<any>>(url: string, options: AxiosRequestConfig = {}): Promise<R> | void {
+  delete<T = any, R = AxiosResponse<any>>(url: string, options: AxiosRequestConfig = {}): Promise<R> {
     try {
       return this.axios.delete<T, R>(url, {...this.config, ...options});
     } catch (error) {
@@ -60,7 +60,7 @@ class RequestService {
     }
   }
 
-  get<T = any, R = AxiosResponse<any>>(url: string, options: AxiosRequestConfig = {}): Promise<R> | void {
+  get<T = any, R = AxiosResponse<any>>(url: string, options: AxiosRequestConfig = {}): Promise<R> {
     try {
       return this.axios.get<T, R>(url, {...this.config, ...options});
     } catch (error) {
@@ -72,7 +72,7 @@ class RequestService {
     return this.axios.getUri({...this.config, ...options});
   }
 
-  head<T = any, R = AxiosResponse<any>>(url: string, options: AxiosRequestConfig = {}): Promise<R> | void {
+  head<T = any, R = AxiosResponse<any>>(url: string, options: AxiosRequestConfig = {}): Promise<R> {
     try {
       return this.axios.head<T, R>(url, {...this.config, ...options});
     } catch (error) {
@@ -80,7 +80,7 @@ class RequestService {
     }
   }
 
-  options<T = any, R = AxiosResponse<any>>(url: string, options: AxiosRequestConfig = {}): Promise<R> | void {
+  options<T = any, R = AxiosResponse<any>>(url: string, options: AxiosRequestConfig = {}): Promise<R> {
     try {
       return this.axios.options<T, R>(url, {...this.config, ...options});
     } catch (error) {
@@ -88,7 +88,7 @@ class RequestService {
     }
   }
 
-  patch<T = any, R = AxiosResponse<any>>(url: string, data: any, options: AxiosRequestConfig = {}): Promise<R> | void {
+  patch<T = any, R = AxiosResponse<any>>(url: string, data: any, options: AxiosRequestConfig = {}): Promise<R> {
     try {
       return this.axios.patch<T, R>(url, this.prepareData(data), {...this.config, ...options});
     } catch (error) {
@@ -96,7 +96,7 @@ class RequestService {
     }
   }
 
-  post<T = any, R = AxiosResponse<any>>(url: string, data: any, options: AxiosRequestConfig = {}): Promise<R> | void {
+  post<T = any, R = AxiosResponse<any>>(url: string, data: any, options: AxiosRequestConfig = {}): Promise<R> {
     try {
       return this.axios.post<T, R>(url, this.prepareData(data), {...this.config, ...options});
     } catch (error) {
@@ -104,7 +104,7 @@ class RequestService {
     }
   }
 
-  put<T = any, R = AxiosResponse<any>>(url: string, data: any, options: AxiosRequestConfig = {}): Promise<R> | void {
+  put<T = any, R = AxiosResponse<any>>(url: string, data: any, options: AxiosRequestConfig = {}): Promise<R> {
     try {
       return this.axios.put<T, R>(url, this.prepareData(data), {...this.config, ...options});
     } catch (error) {
@@ -112,7 +112,7 @@ class RequestService {
     }
   }
 
-  request<T = any, R = AxiosResponse<any>>(options: AxiosRequestConfig): Promise<R> | void {
+  request<T = any, R = AxiosResponse<any>>(options: AxiosRequestConfig): Promise<R> {
     try {
       return this.axios.request<T, R>({...this.config, ...options});
     } catch (error) {
